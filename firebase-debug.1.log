@@ -1,0 +1,39 @@
+[debug] [2021-04-08T17:16:05.244Z] ----------------------------------------------------------------------
+[debug] [2021-04-08T17:16:05.246Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\KIIT\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js hosting:disable
+[debug] [2021-04-08T17:16:05.247Z] CLI Version:   9.8.0
+[debug] [2021-04-08T17:16:05.247Z] Platform:      win32
+[debug] [2021-04-08T17:16:05.247Z] Node Version:  v14.16.0
+[debug] [2021-04-08T17:16:05.248Z] Time:          Thu Apr 08 2021 22:46:05 GMT+0530 (India Standard Time)
+[debug] [2021-04-08T17:16:05.248Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-04-08T17:16:05.254Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-04-08T17:16:05.255Z] > authorizing via signed-in user
+[debug] [2021-04-08T17:16:05.256Z] [iam] checking project netflix-clone-e05e7 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-04-08T17:16:05.258Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-04-08T17:16:05.258Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-04-08T17:16:05.838Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Thu, 08 Apr 2021 17:16:07 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-04-08T17:16:05.856Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/netflix-clone-e05e7:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-04-08T17:16:27.100Z] [iam] error while checking permissions, command may fail: FirebaseError: Server Error. connect ETIMEDOUT 216.58.200.170:443
+[debug] [2021-04-08T17:16:27.101Z] > refreshing access token with scopes: []
+[debug] [2021-04-08T17:16:27.101Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-04-08T17:16:48.228Z] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2021-04-08T17:16:48.943Z] FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+    at invalidCredentialError (C:\Users\KIIT\AppData\Roaming\npm\node_modules\firebase-tools\lib\auth.js:26:12)
+    at refreshTokens (C:\Users\KIIT\AppData\Roaming\npm\node_modules\firebase-tools\lib\auth.js:297:15)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async Client.getAccessToken (C:\Users\KIIT\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:144:23)
+    at async Client.addAuthHeader (C:\Users\KIIT\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:135:21)
+    at async Client.request (C:\Users\KIIT\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:93:34)
+    at async Object.getFirebaseProject (C:\Users\KIIT\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:289:21)
+    at async Object.getDefaultHostingSite (C:\Users\KIIT\AppData\Roaming\npm\node_modules\firebase-tools\lib\getDefaultHostingSite.js:8:21)
+    at async Object.requireHostingSite [as fn] (C:\Users\KIIT\AppData\Roaming\npm\node_modules\firebase-tools\lib\requireHostingSite.js:9:18)
+    at async C:\Users\KIIT\AppData\Roaming\npm\node_modules\firebase-tools\lib\command.js:161:17
+[error] 
+[error] Error: Failed to get Firebase project netflix-clone-e05e7. Please make sure the project exists and your account has permission to access it.
